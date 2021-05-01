@@ -2,11 +2,13 @@
 
 set -x
 
-wget https://www.unidata.ucar.edu/downloads/ldm/ldm-${LDM_VERSION}.tar.gz
+# wget https://www.unidata.ucar.edu/downloads/ldm/ldm-${LDM_VERSION}.tar.gz
 
-gunzip -c ldm-${LDM_VERSION}.tar.gz | pax -r '-s:/:/src/:'
+# gunzip -c ldm-${LDM_VERSION}.tar.gz | pax -r '-s:/:/src/:'
 
-rm ldm-${LDM_VERSION}.tar.gz
+git clone https://github.com/Unidata/LDM -b devel /home/ldm/ldm-${LDM_VERSION}/src
+
+# rm ldm-${LDM_VERSION}.tar.gz
 
 cd /home/ldm/ldm-${LDM_VERSION}/src
 
